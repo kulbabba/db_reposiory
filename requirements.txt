@@ -1,0 +1,52 @@
+REQUIREMENTS:
+
+The software must work with address records in database
+1) add person's info
+2) delete person's info
+3) show all addressbook entries with all the info
+
+
+The database should store the following information about user:
+- id
+- name
+- last name
+- address
+- telephone number
+
+
+
+DESIGN:
+The database should have 1 table
+Database name: "phonebook"
+Table name: "people"
+Table columns: "id", "name", "last_name", "address", "phone"
+
+
+FUNCTIONS:
+add_person_to_db()
+delete_person()
+show_all_entries()
+take_user_input()   return int
+
+
+
+DB QUERIES:
+
+Create table:
+CREATE TABLE people
+(
+id int NOT NULL, AUTO INCREMENT,
+name varchar(255) NOT NULL,
+last_name varchar(255),
+address varchar(255),
+phone int(255),
+PRIMARY KEY (id)
+);
+1) add person's info
+INSERT INTO people(name, last_name, address, phone)
+VALUES ('name', 'last name', 'address', 'phone');
+2) delete person's info
+DELETE FROM people
+WHERE id = "someones_id";
+3) show all addressbook entries with all the info
+SELECT * from people;
